@@ -1,13 +1,83 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
+
+/* Reset margins and paddings on most elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gainsboro;
+}
+
+.card {
+    border: 4px double rebeccapurple;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    grid-template-areas: "from from stamp"
+    ". to ."
+;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+}
+
+.gridItem1 {
+    grid-area: from;
+}
+
+.gridItem2 {
+    grid-area: to;
+}
+
+.gridItem3 {
+    border: 4px solid black;
+    width: 60px;
+    margin-left: 100px;
+    grid-area: stamp;
+}
+
+
+
+span {
+    display: inline-block;
+    border: 3px solid black;
+    width: 70px;
+    height: 100px;
+}
+
+p {
+    transform: rotate(45deg);
+    margin-top: 65%;
+    margin-left: 20%;
+}
+
+
+
